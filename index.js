@@ -6,7 +6,6 @@ const app = express();
 
 // depois do db
 const mongoose = require("mongoose");
-
 const Bosses = require("./models/Bosses");
 
 app.use(
@@ -38,7 +37,7 @@ app.post("/bosses", async (req, res) => {
 });
 
 //Exibir o json
-app.get("/", async (req, res) => {
+app.get("/bosses", async (req, res) => {
   try {
     const bosses = await Bosses.find();
 
