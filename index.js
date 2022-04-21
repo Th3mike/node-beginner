@@ -3,10 +3,17 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+<<<<<<< HEAD
 var cors = require('cors');
 
 // depois do db
 const mongoose = require("mongoose");
+=======
+
+// depois do db
+const mongoose = require("mongoose");
+
+>>>>>>> 7def8b7 (curso concluido)
 const Bosses = require("./models/Bosses");
 
 app.use(
@@ -38,7 +45,11 @@ app.post("/bosses", async (req, res) => {
 });
 
 //Exibir o json
+<<<<<<< HEAD
 app.get("/bosses", async (req, res) => {
+=======
+app.get("/", async (req, res) => {
+>>>>>>> 7def8b7 (curso concluido)
   try {
     const bosses = await Bosses.find();
 
